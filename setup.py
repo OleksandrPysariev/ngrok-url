@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='ngrok_connection',
-    version='1.0.2',
+    version='1.0.3',
     author='Oleksandr Pysariev',
     author_email='apalexlife@gmail.com',
     packages=find_packages(),
