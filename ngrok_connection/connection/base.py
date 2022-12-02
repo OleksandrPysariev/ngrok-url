@@ -24,7 +24,7 @@ class BaseNgrokConnection(ABC):
         raise NotImplementedError
 
     @property
-    def tunnels(self) -> list[dict]:
+    def tunnels(self) -> List[dict]:
         if not self.data:
             raise DataNotLoadedError()
 
