@@ -1,16 +1,16 @@
 import asyncio
 
-from ngrok_connection import AsyncNgrokConnection, SyncNgrokConnection
+from ngrok_connection import sync, async_
 
 
 def sync_test():
-    connection = SyncNgrokConnection()
+    connection = sync.SyncNgrokConnection()
     connection.load_tunnel_data()
     return connection.get_tunnel_url()
 
 
 async def async_test():
-    connection = AsyncNgrokConnection()
+    connection = async_.AsyncNgrokConnection()
     await connection.load_tunnel_data()
     return connection.get_tunnel_url()
 

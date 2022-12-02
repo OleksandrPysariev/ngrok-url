@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from typing import Any
+from typing import Any, Dict, List, Optional, Union
 
 from ngrok_connection.exceptions import DataNotLoadedError, TunnelNotFoundError
 
@@ -13,7 +13,7 @@ class BaseNgrokConnection(ABC):
     ):
         self.ngrok_host = ngrok_host
         self.ngrok_port = ngrok_port
-        self.data: dict[str, list[dict] | Any] | None = None
+        self.data: Optional[Dict[str, Union[List[dict], Any]]] = None
 
     @property
     def ngrok_url(self):

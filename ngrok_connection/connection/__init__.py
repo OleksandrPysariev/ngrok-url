@@ -1,2 +1,4 @@
-from .async_ import AsyncNgrokConnection
-from .sync import SyncNgrokConnection
+__all__ = [
+    "sync",
+    "async_",
+]
